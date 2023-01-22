@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="nl" dir="ltr">
+    <head>
+        <!-- Metatags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Dennis Veldhuizen">
+        <!-- Titel -->
+        <title>Muziekschool H&#38;J &#124; Blog</title>
+        <!-- Het inladen van jQuery UI-CSS met een zelfgekozen thema.
+        Als deze thema goed bevalt en er is een behoefte om deze thema nogmaals te kunnen gebruiken voor bijvoorbeeld de verdere modificaties of het te kunnen delen met de anderen, dan is het handig om het bijbehorende internetadres (URL) waar deze thema gecreëerd is goed te bewaren voor later:
+        https://jqueryui.com/themeroller/#!zThemeParams=5d00008000cd05000000000000003d8888d844329a8dfe02723de3e5701db9777083d4196cdbd4d1b23f4707dfcf44e72107af7b06ac47e5bf58d05f425fcf66d62e989588c4a9388b188614e0ac15b8af9fa4f7acfd390a3a7d402fe63f7d1c04d041a5cf16b8812d1ddfab09014c4718915c17161037c5ad18592e939279cbaf5cc5ebcd2a6c3bc158fa7d5c9ca1b852891145db0d6f7855a5db22f9d3104a86feb1012e4dcec25e5b354d723742db9cebb7b839855647af1ab90afc0fabd59bd56aaf334813d378b3358258588add56e8fabc69be2a6ff924c5bab8a9046f55360e6764c2d8ff11281ddd3805605f4c40565e56027d657c3a5bbc8a4cf02b2890410783d04f64edcaeeae435d2e9d05bea1df6f7e62f3cb8e572bd2096c404aa47c4c9c702894cba1718fca205c0737923405d35c3436c9c5fd3fe90f690656a2879c4374a1aef7973649063b902b10258ec1d81094b41673ba5813f85a7b5aa9d5907198b0c4bd2e9887e2b632b0ac88fb679346ad7bbd1471878ff06a99c499b9128f928961b641a9646eadd7a6f794591178e62c552c429ddd95ecc08db3ae631cc6cb5a4377cb96f164fef6db6f11. -->
+        <link rel="stylesheet" href="../css/theme/jquery-ui.css">
+        <!-- De eigenhandige CSS-script inladen. -->
+        <link rel="stylesheet" href="../css/style/stijl.css">
+        <!-- Het binnenhalen van jQuery-bibliotheek via CDN (Content Delivery Network). -->
+        <script
+            src="https://code.jquery.com/jquery-3.6.3.js"
+            integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+            crossorigin="anonymous">
+        </script>
+        <!-- Het inladen van jQuery UI-JavaScript. -->
+        <script src="../js/jquery-ui.js"></script>
+        <script src="../js/datepicker-nl.js"></script>
+        <!-- De eigenhandige JS-script inladen. -->
+        <script src="../js/beheerpagina.js"></script>
+    </head>
+    <body>
+        <!-- Header -->
+        <header>
+            <section class="tekst_wit">
+                <h1>Muziekschool H&#38;J</h1><br>
+                <h4>Blog &#124; Beheerpagina</h4>
+            </section>
+        </header>
+        <!-- Container -->
+        <main id="container_2">
+            <!-- Buttongroep -->
+            <nav id="groep_links" class="achtergrond_bruin">
+                <a class="groep_links link tekst_wit" href="index.html">Home</a>
+                <a class="groep_links link tekst_wit" href="overons.html">Over ons</a>
+                <a class="groep_links link tekst_wit" href="tarieven.html">Tarieven</a>
+                <a class="groep_links link tekst_wit" href="contact.html">Contact</a>
+                <a class="groep_links link tekst_wit" href="blog_overzichtspagina.html">Blog</a>
+            </nav>
+            <!-- Lijn -->
+            <div id="lijn"></div>
+            <!-- De buttongroep speciaal voor blog. -->
+            <nav id="groep_links_blog" class="achtergrond_grijs verbergen">
+                <a class="groep_links_blog link tekst_wit" href="blog_overzichtspagina.html">Overzichtspagina</a>
+                <a class="groep_links_blog link tekst_wit" href="blog_database.html">Database</a>
+                <a class="groep_links_blog link tekst_wit" href="blog_beheerpagina.html">Beheerpagina</a>
+            </nav>
+            <!-- De inhoud met daarin een beheerpagina. -->
+            <div id="beheer">
+                <section class="inhoud_2">
+                    <h3 class="tekst_bruin">Welkom op de beheerpagina van muziekschool H&#38;J</h3>
+                    <h5>Hieronder worden de nieuwe blogartikelen toegevoegd aan de tabel "blogartikelen" van database (zie helemaal onderaan)</h5>
+                    <!-- Het onderstaande formulier wordt gebruikt om de nieuwe blogartikelen zogenaamd toe te voegen. -->
+                    <form id="beheerpagina">
+                        <label for="titel">Titel blogartikel</label><br>
+                        <input id="titel" class="invoerveld" type="text" placeholder="Titel voor uw nieuw nieuw blogartikel"><br>
+                        <label for="inhoud">Inhoud blogartikel</label><br>
+                        <textarea id="inhoud" class="invoerveld" rows="10" placeholder="Inhoud over uw nieuw blogartikel"></textarea><br>
+                        <label for="naam">Uw naam</label><br>
+                        <input id="naam" class="invoerveld" type="text" placeholder="Uw naam"><br>
+                        <label for="functie">Uw functie</label><br>
+                        <input id="functie" class="invoerveld" type="text" placeholder="Uw functie"><br>
+                        <label for="datum">Datum plaatsing</label><br>
+                        <input id="datum" class="invoerveld" type="text" placeholder="dd-mm-yyyy"><br>
+                        <label for="afbeelding">Afbeelding blogartikel</label><br>
+                        <input id="afbeelding" class="invoerveld" type="file"><br>
+                        <label for="alternatief">Alternatieve naam</label><br>
+                        <input id="alternatief" class="invoerveld" type="text" placeholder="Een alternatieve naam voor uw bovenstaande afbeelding">
+                        <input type="button" id="button_verzenden" class="achtergrond_bruin tekst_wit" value="Uploaden">
+                    </form>
+                </section><hr>
+                <section class="inhoud_2">
+                    <h3 class="tekst_bruin">Welkom in de database van muziekschool H&#38;J</h3>
+                    <h5>Hieronder is de tabel "blogartikelen" te zien waaraan de nieuwe blogartikelen toegevoegd zullen worden </h5>
+                    <table id="database">
+                        <thead>
+                            <tr>
+                                <th id="tabel_blogs" colspan="8">blogartikelen</th>
+                            </tr>
+                            <tr>
+                                <th>blog_id</th>
+                                <th>titel</th>
+                                <th>inhoud</th>
+                                <th>naam</th>
+                                <th>functie</th>
+                                <th>datum</th>
+                                <th>afbeelding</th>
+                                <th>alternatief</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr id="1">
+                                <td>1</td>
+                                <td>Trainen met bariton saxofoon</td>
+                                <td>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sapien risus, feugiat eget fringilla vitae, varius a ex. Vestibulum non elit dolor. Sed et elit in nisi tempus pulvinar. Ut quam metus, condimentum porttitor risus ut, tincidunt ultricies elit. Morbi pharetra ornare mauris, at congue enim commodo ut. Praesent cursus convallis ultrices. Mauris metus dui, ultrices ac porttitor ut, facilisis in dolor. Praesent sit amet nunc dapibus, bibendum massa non, convallis justo.<br><br>
+                                    Donec tincidunt leo at lorem egestas euismod eu nec ante. Sed orci purus, lobortis ac bibendum vitae, rutrum at velit. In hendrerit ultrices libero, in semper mi ornare vel. Morbi tincidunt efficitur mauris, id euismod nisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean dictum nibh quis ipsum mattis dictum. Sed interdum ut lacus ut bibendum. Nunc blandit pulvinar erat, id rutrum sem suscipit non.<br><br>
+                                    Ut mollis ut risus ac varius. Phasellus ullamcorper, quam aliquam ornare fringilla, enim enim vestibulum est, vel sodales metus erat non orci. Quisque non justo ac urna commodo pulvinar. Ut dignissim neque velit, sit amet egestas enim accumsan sed. Cras blandit mi tortor, ut congue ligula feugiat sit amet. Etiam varius ut neque vitae venenatis. Donec ultrices rhoncus mauris id scelerisque. Maecenas nec nunc quam. Donec sapien erat, facilisis sit amet rutrum id, convallis eu diam. Nulla molestie elit nec tortor rutrum ultricies.
+                                </td>
+                                <td>Jesse</td>
+                                <td>Docent</td>
+                                <td>18-05-2022</td>
+                                <td>blog_bariton_saxofoon.jpg</td>
+                                <td>bariton saxofoon</td>
+                            </tr>                                                                        
+                            <tr id="2">
+                                <td>2</td>
+                                <td>Trainen met tenor saxofoon</td>
+                                <td>
+                                    Ut mollis ut risus ac varius. Phasellus ullamcorper, quam aliquam ornare fringilla, enim enim vestibulum est, vel sodales metus erat non orci. Quisque non justo ac urna commodo pulvinar. Ut dignissim neque velit, sit amet egestas enim accumsan sed. Cras blandit mi tortor, ut congue ligula feugiat sit amet. Etiam varius ut neque vitae venenatis. Donec ultrices rhoncus mauris id scelerisque. Maecenas nec nunc quam. Donec sapien erat, facilisis sit amet rutrum id, convallis eu diam. Nulla molestie elit nec tortor rutrum ultricies.<br><br>
+                                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi maximus mi rutrum tortor luctus consectetur. Nunc iaculis purus arcu, a vulputate nisi maximus vel. Duis gravida nibh sit amet odio laoreet convallis. Integer eget mi ultricies, vestibulum leo in, pulvinar neque. In feugiat eget lectus id pulvinar. Integer ac odio a tellus lobortis aliquet. Nunc ultrices fringilla nibh, eu faucibus ante. Morbi efficitur faucibus elit, et porttitor mauris accumsan at. Suspendisse et ligula gravida, iaculis eros nec, interdum orci.<br><br>
+                                    Praesent mattis justo eget purus venenatis, a ornare justo congue. Donec urna felis, lacinia sed est sit amet, facilisis malesuada augue. Phasellus eu viverra metus, nec convallis turpis.
+                                </td>
+                                <td>Hannah</td>
+                                <td>Docente</td>
+                                <td>27-06-2022</td>
+                                <td>blog_tenor_saxofoon.jpg</td>
+                                <td>tenor saxofoon</td>
+                            </tr>
+                            <tr id="3">
+                                <td>3</td>
+                                <td>Trainen met trompet</td>
+                                <td>
+                                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi maximus mi rutrum tortor luctus consectetur. Nunc iaculis purus arcu, a vulputate nisi maximus vel. Duis gravida nibh sit amet odio laoreet convallis. Integer eget mi ultricies, vestibulum leo in, pulvinar neque. In feugiat eget lectus id pulvinar.<br><br>
+                                    Integer ac odio a tellus lobortis aliquet. Nunc ultrices fringilla nibh, eu faucibus ante. Morbi efficitur faucibus elit, et porttitor mauris accumsan at. Suspendisse et ligula gravida, iaculis eros nec, interdum orci. Praesent mattis justo eget purus venenatis, a ornare justo congue. Donec urna felis, lacinia sed est sit amet, facilisis malesuada augue. Phasellus eu viverra metus, nec convallis turpis.<br><br>
+                                    Nam quis lectus non lectus faucibus commodo. Aenean sollicitudin augue accumsan nulla dictum, non ultrices tortor porta. Vivamus at justo scelerisque, auctor ex a, luctus lacus. Aliquam accumsan in metus vel pharetra. Duis est sapien, dapibus et nisi vel, semper laoreet dolor. Donec at orci ipsum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque nisl tortor, tempus vel nunc nec, tempor ultricies ex.
+                                </td>
+                                <td>Hannah</td>
+                                <td>Docente</td>
+                                <td>18-08-2022</td>
+                                <td>blog_trompet.jpg</td>
+                                <td>trompet</td>
+                            </tr>
+                            <tr id="4">
+                                <td>4</td>
+                                <td>Trainen met trombone</td>
+                                <td>
+                                    Nam quis lectus non lectus faucibus commodo. Aenean sollicitudin augue accumsan nulla dictum, non ultrices tortor porta. Vivamus at justo scelerisque, auctor ex a, luctus lacus. Aliquam accumsan in metus vel pharetra. Duis est sapien, dapibus et nisi vel, semper laoreet dolor. Donec at orci ipsum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque nisl tortor, tempus vel nunc nec, tempor ultricies ex.<br><br>
+                                    Maecenas eget felis elementum, vestibulum eros non, mollis ipsum. Suspendisse rhoncus diam nisl, non posuere enim condimentum eget. Nunc id odio ac justo posuere faucibus in et quam. Integer quis tellus id ante laoreet sollicitudin. Quisque in pellentesque sapien, nec hendrerit eros. Donec sit amet nibh turpis. Suspendisse lectus lacus, mattis volutpat velit non, commodo vulputate purus. Nulla facilisi. Quisque rutrum at leo eget bibendum. Aliquam ac orci lacus. Nulla facilisi.
+                                </td>
+                                <td>Jesse</td>
+                                <td>Docent</td>
+                                <td>05-10-2022</td>
+                                <td>blog_trombone.jpg</td>
+                                <td>trombone</td>
+                            </tr>
+                            <tr id="5">
+                                <td>5</td>
+                                <td>Trainen met tuba</td>
+                                <td>
+                                    Maecenas eget felis elementum, vestibulum eros non, mollis ipsum. Suspendisse rhoncus diam nisl, non posuere enim condimentum eget. Nunc id odio ac justo posuere faucibus in et quam. Integer quis tellus id ante laoreet sollicitudin. Quisque in pellentesque sapien, nec hendrerit eros. Donec sit amet nibh turpis. Suspendisse lectus lacus, mattis volutpat velit non, commodo vulputate purus. Nulla facilisi. Quisque rutrum at leo eget bibendum. Aliquam ac orci lacus. Nulla facilisi.<br><br>
+                                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi maximus mi rutrum tortor luctus consectetur. Nunc iaculis purus arcu, a vulputate nisi maximus vel. Duis gravida nibh sit amet odio laoreet convallis. Integer eget mi ultricies, vestibulum leo in, pulvinar neque. In feugiat eget lectus id pulvinar. Integer ac odio a tellus lobortis aliquet. Nunc ultrices fringilla nibh, eu faucibus ante. Morbi efficitur faucibus elit, et porttitor mauris accumsan at. Suspendisse et ligula gravida, iaculis eros nec, interdum orci. Praesent mattis justo eget purus venenatis, a ornare justo congue. Donec urna felis, lacinia sed est sit amet, facilisis malesuada augue. Phasellus eu viverra metus, nec convallis turpis.
+                                </td>
+                                <td>Hannah</td>
+                                <td>Docente</td>
+                                <td>12-01-2023</td>
+                                <td>blog_tuba.jpg</td>
+                                <td>tuba</td>
+                            </tr>
+                        </tbody>
+                    </table><br>
+                </section>
+            </div>
+            <!-- Footer -->
+            <footer class="achtergrond_bruin">
+                <section>
+                    <h5>
+                        &copy; Copyright 2021 Muziekschool H&#38;J<br>
+                        (Dit is een oefenopdracht, alle informatie op deze website is fictief.)
+                    </h5>
+                </section>
+            </footer>
+        </main>
+        <!-- De onderstaande div-elementen fungeren als eigenhandige alert-functie. -->
+        <div id="dialoog1">
+            Niet alle velden zijn ingevoerd!
+        </div>
+        <div id="dialoog2">
+            Het is gelukt met het toevoegen van een nieuw record aan de tabel "blogartikelen".
+        </div>
+        <div id="dialoog3">
+            Hier is te zien dat een nieuw record toegevoegd is aan de tabel "blogartikelen".
+        </div>
+    </body>
+</html>
