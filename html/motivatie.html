@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="nl" dir="ltr">
+    <head>
+        <!-- Metatags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Dennis Veldhuizen">
+        <!-- Titel -->
+        <title>Muziekschool H&#38;J &#124; Motivatie</title>
+        <!-- De eigenhandige CSS-script inladen. -->
+        <link rel="stylesheet" href="../css/style/stijl.css">
+        <!-- Het binnenhalen van jQuery-bibliotheek via CDN (Content Delivery Network). -->
+        <script
+            src="https://code.jquery.com/jquery-3.6.3.js"
+            integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+            crossorigin="anonymous">
+        </script>
+        <!-- Het binnenhalen van React-bibliotheek via CDN (Content Delivery Network). -->
+        <script
+            crossorigin
+            src="https://unpkg.com/react@18/umd/react.development.js">
+        </script>
+        <!-- Het binnenhalen van ReactDOM-bibliotheek via CDN (Content Delivery Network). -->
+        <script
+            crossorigin
+            src="https://unpkg.com/react-dom@18/umd/react-dom.development.js">
+        </script>
+        <!-- Het binnenhalen van babel-bibliotheek via CDN (Content Delivery Network). -->
+        <script src="https://unpkg.com/@babel/standalone@7.20.14/babel.min.js"></script>
+        <!-- De eigenhandige React-component inladen om het te vertalen van JSX naar HTML. -->
+        <script type="text/babel" src="../js/app.js"></script>
+    </head>
+    <body>
+        <!-- Header -->
+        <header>
+            <section class="tekst_wit">
+                <h1>Muziekschool H&#38;J</h1><br>
+                <h4>Motivatie</h4>
+            </section>
+        </header>
+        <!-- Container -->
+        <main id="container_1">
+            <!-- Buttongroep -->
+            <nav id="groep_links" class="achtergrond_bruin">
+                <a class="groep_links link tekst_wit" href="index.html">Home</a>
+                <a class="groep_links link tekst_wit" href="overons.html">Over ons</a>
+                <a class="groep_links link tekst_wit" href="tarieven.html">Tarieven</a>
+                <a class="groep_links link tekst_wit" href="contact.html">Contact</a>
+                <a class="groep_links link tekst_wit" href="blog_overzichtspagina.html">Blog</a>
+                <a class="groep_links link tekst_wit" href="motivatie.html">Motivatie</a>
+            </nav>
+            <!-- Lijn -->
+            <div id="lijn"></div>
+            <!-- De inhoud met daarin een willekeurige quote. -->
+            <div id="inhoud_1">
+                <!-- Blog -->
+                <section id="quote">
+                    <h3 class="tekst_bruin">Welkom op de motivatiepagina van muziekschool H&#38;J</h3>
+                    <h5>Laat je hieronder motiveren met inspirerende quotes</h5>
+                    <!-- Het onderstaande div-element "#root" laat een willekeurige quote en bijbehorende auteur zien. -->
+                    <div id="motivatie"></div>
+                </section>
+            </div>
+            <!-- Footer -->
+            <footer class="achtergrond_bruin">
+                <section>
+                    <h5>
+                        &copy; Copyright 2021 Muziekschool H&#38;J<br>
+                        (Dit is een oefenopdracht, alle informatie op deze website is fictief.)
+                    </h5>
+                </section>
+            </footer>
+        </main>
+    </body>
+</html>
